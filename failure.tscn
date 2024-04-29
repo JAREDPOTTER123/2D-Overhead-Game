@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgw3x6blf4flu"]
+
+[ext_resource type="Script" path="res://failure.gd" id="1_y5qka"]
+
+[node name="Failure" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y5qka")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.002
+anchor_bottom = 1.0
+offset_right = -0.304077
+offset_bottom = 1.0
+
+[node name="Label" type="Label" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.998
+anchor_bottom = 1.0
+offset_right = 0.307983
+offset_bottom = -406.0
+theme_override_font_sizes/font_size = 100
+text = "                Failure!"
+
+[node name="Lose Text Label" type="Label" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.998
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 265.0
+offset_right = 1.30798
+offset_bottom = -141.0
+theme_override_font_sizes/font_size = 50
+text = "   Unforturantly, you weren't able to save your 
+ town! However, everyone would forgive you if 
+                       you try again... right?"
+
+[node name="Play_Again" type="Button" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 514.0
+offset_right = -638.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Let's Get Them Enemies!"
+
+[node name="Quit_Label" type="Button" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 610.0
+offset_top = 512.0
+offset_right = -121.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No Thanks"
+
+[connection signal="pressed" from="TextEdit/Play_Again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="TextEdit/Quit_Label" to="." method="_on_quit_label_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bob4od5gxmaja"]
+
+[ext_resource type="Texture2D" uid="uid://cqnd48b1ib4t3" path="res://Puddle.png" id="1_gy45k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uawb3"]
+size = Vector2(34, 34)
+
+[node name="Puddle" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gy45k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uawb3")

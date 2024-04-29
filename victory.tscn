@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxbpctc5olcw5"]
+
+[ext_resource type="Script" path="res://victory.gd" id="1_mckpx"]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mckpx")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 1.0
+offset_right = 0.151855
+offset_bottom = -4.0
+
+[node name="Victory Label" type="Label" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = -2.0
+offset_bottom = -476.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "                Victory!"
+
+[node name="Win Text Label" type="Label" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 197.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "                        Good Job! You saved your 
+                           town from the enemy!"
+
+[node name="Play_Again" type="Button" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 127.0
+offset_top = 425.0
+offset_right = -650.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Let's Get More of Those Enemies!"
+
+[node name="Quit" type="Button" parent="TextEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 628.0
+offset_top = 421.0
+offset_right = -149.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nah, That was Enough Fighting for Now."
+
+[connection signal="pressed" from="TextEdit/Play_Again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="TextEdit/Quit" to="." method="_on_quit_pressed"]
